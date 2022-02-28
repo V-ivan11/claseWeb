@@ -8,35 +8,8 @@
     <title>Elementos</title>
 </head>
 
-<script type="text/javascript">
-    function mayor3(a,b,c){
-    if(a >= b && a >=c){
-        document.write('<br>'+ a);
-    }else{
-        if(b >= a && b >= c){
-            document.write('<br>'+ b);
-        }else{
-            document.write('<br>'+ c);
-        }
-    }
-}
-
-function paresN(N){
-    var i = 0;
-    while(i <= N){
-        document.write(i, "\n");
-        i+=2;
-    }
-}
-
-function sumaN(N){
-    var suma = 0, i = 0;
-    while(i <= N){
-        suma += i;
-        i++;
-    }
-    document.write('<br>' + suma);
-}
+<script type="text/javascript" src="funciones.js">
+    
 </script>
 
 <body>
@@ -94,6 +67,12 @@ function sumaN(N){
         paresN(100);
         document.write('<br><strong>Suma de los 100 primeros números: </strong>');
         sumaN(100);
+        
+        document.write('<br><strong>Insertion sort de [2,3,10,6,9,9,6,8,1,7]: </strong><br>');
+        var array = insertionSort([2,3,10,6,9,9,6,8,1,7]);
+        array.forEach(element => {
+            document.write('[' + element + ']');
+        });
     </script>
     <br><br>
     <footer>
