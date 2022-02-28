@@ -54,3 +54,16 @@ function selectionSort(D){
     }
     return D;
 }
+
+function bubbleSort(D) {
+    for (var i = 0; i < D.length; i++) {
+        for(var j = 0; j < (D.length-i); j++){
+            if(D[j]>D[j+1]){
+                var aux = D[j];
+                D[j] = D[j+1];
+                D[j-1] = aux;
+            }
+        }
+    }
+    return D;
+}
