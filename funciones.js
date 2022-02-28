@@ -39,3 +39,18 @@ function insertionSort(D){
     }
     return D;
 }
+
+function selectionSort(D){
+    for (var i = 0; i < D.length; i++) {
+        var min = i;
+        for(var j = i; j < D.length; j++){
+            if(D[min] > D[j]){
+                min = j;
+            }
+        }
+        var aux = D[min];
+        D[min] = D[i];
+        D[i] = aux;
+    }
+    return D;
+}

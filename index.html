@@ -67,9 +67,15 @@
         paresN(100);
         document.write('<br><strong>Suma de los 100 primeros números: </strong>');
         sumaN(100);
-        
+
         document.write('<br><strong>Insertion sort de [2,3,10,6,9,9,6,8,1,7]: </strong><br>');
         var array = insertionSort([2,3,10,6,9,9,6,8,1,7]);
+        array.forEach(element => {
+            document.write('[' + element + ']');
+        });
+
+        document.write('<br><strong>Selection sort de [8,3,9,1,2,9,5,0,1,5]: </strong><br>');
+        var array = selectionSort([8,3,9,1,2,9,5,0,1,5]);
         array.forEach(element => {
             document.write('[' + element + ']');
         });
