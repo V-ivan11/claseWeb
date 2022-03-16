@@ -56,12 +56,12 @@ function selectionSort(D){
 }
 
 function bubbleSort(D) {
-    for (var i = 0; i < D.length; i++) {
-        for(var j = 0; j < (D.length-i); j++){
+    for (var i = 0; i < D.length-1; i++) {
+        for(var j = 0; j < (D.length-i-1); j++){
             if(D[j]>D[j+1]){
                 var aux = D[j];
                 D[j] = D[j+1];
-                D[j-1] = aux;
+                D[j+1] = aux;
             }
         }
     }
